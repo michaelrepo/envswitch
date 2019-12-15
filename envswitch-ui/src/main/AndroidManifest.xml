@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.michael.envswitch">
+
+    <application>
+        <activity
+            android:name="com.michael.envswitch.EnvironmentSwitchActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+    </application>
+</manifest>
