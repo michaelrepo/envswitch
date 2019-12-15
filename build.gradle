@@ -29,35 +29,3 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
-
-ext {
-    compile_version = 29
-
-    //snapshot
-//    artifactId_base = 'environmentswitcher-base-snapshot'
-//    artifactId_compiler = 'environmentswitcher-compiler-snapshot'
-//    artifactId_compiler_release = 'environmentswitcher-compiler-release-snapshot'
-//    artifactId_environment_switcher = 'environmentswitcher-snapshot'
-//
-//    publishVersion_base = '0.0.3'
-//    publishVersion_compiler = '0.0.4'
-//    publishVersion_compiler_release = publishVersion_compiler
-//    publishVersion_environment_switcher = publishVersion_base
-
-    // release
-    artifactId_base = 'environmentswitcher-base'
-    artifactId_compiler = 'environmentswitcher-compiler'
-    artifactId_compiler_release = 'environmentswitcher-compiler-release'
-    artifactId_environment_switcher = 'environmentswitcher'
-
-    publishVersion_base = '1.5.2'
-    publishVersion_compiler = '1.5.3'
-    publishVersion_compiler_release = publishVersion_compiler
-    publishVersion_environment_switcher = publishVersion_base
-
-    user_org = "xiaomaa"
-    user_emial = "xiaomaa949804781@gmail.com"
-    group_id = "com.xiaomaa.environmentswitcher"
-    web_site = "https://github.com/Codexiaomaa/EnvironmentSwitcher"
-    gitUrl = "https://github.com/Codexiaomaa/EnvironmentSwitcher.git"
-}
