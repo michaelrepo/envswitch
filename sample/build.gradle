@@ -41,6 +41,6 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.2.15'
 //    implementation 'com.github.michaelrepo:envswitch:1.0.1'
 //    debugAnnotationProcessor 'com.github.michaelrepo:compiler:1.0.1'
-//releaseAnnotationProcessor 'com.github.michaelrepo:compiler-release:1.0.1'
+//    releaseAnnotationProcessor 'com.github.michaelrepo:compiler-release:1.0.1'
 
 }
