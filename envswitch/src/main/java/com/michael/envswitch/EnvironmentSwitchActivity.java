@@ -65,8 +65,8 @@ public class EnvironmentSwitchActivity extends Activity {
             for (EnvironmentBean environmentBean : this.environmentBeans) {
                 if (!TextUtils.equals(environmentBean.getModule().getName(), currentModuleName) || xxModuleCurrentEnvironment == null) {
                     currentModuleName = environmentBean.getModule().getName();
-                    Method getXXEnvironmentBeanMethod = environmentSwitcherClass.getMethod("get" + environmentBean.getModule().getName() + "EnvironmentBean", Context.class, boolean.class);
-                    xxModuleCurrentEnvironment = (EnvironmentBean) getXXEnvironmentBeanMethod.invoke(environmentSwitcherClass.newInstance(), this, true);
+                    Method getXXEnvironmentBeanMethod = environmentSwitcherClass.getMethod("get" + environmentBean.getModule().getName() + "EnvironmentBean", Context.class);
+                    xxModuleCurrentEnvironment = (EnvironmentBean) getXXEnvironmentBeanMethod.invoke(environmentSwitcherClass.newInstance(), this);
                 }
                 environmentBean.setChecked(xxModuleCurrentEnvironment.equals(environmentBean));
             }
