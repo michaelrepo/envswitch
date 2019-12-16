@@ -34,13 +34,12 @@ dependencies {
     debugAnnotationProcessor project(':compiler')
     releaseAnnotationProcessor project(':compiler-release')
     implementation project(':envswitch')
-
     implementation 'com.squareup.retrofit2:retrofit:2.6.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.15'
-
+    //implementation 'com.github.michaelrepo:envswitch:1.0.3'
 
 
 }
