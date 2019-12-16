@@ -1,1 +1,1 @@
-include ':sample', ':annotations', ':compiler', ':compiler-release', ':envswitch-ui'
+include ':sample', ':annotations', ':compiler', ':compiler-release', ':envswitch'
