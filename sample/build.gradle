@@ -10,10 +10,21 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        release {
+            keyAlias 'jiandan'
+            keyPassword 'EasyTechAndroid'
+            storeFile file('../easyqa_beta')
+            storePassword 'EasyTechAndroid'
+        }
+    }
+
 
     buildTypes {
         release {
+            debuggable true
             minifyEnabled true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
