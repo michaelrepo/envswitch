@@ -50,8 +50,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.15'
-//    implementation 'com.github.michaelrepo.envswitch:envswitch:1.0.5'
-//    debugAnnotationProcessor 'com.github.michaelrepo.envswitch:compiler:1.0.5'
-//    releaseAnnotationProcessor 'com.github.michaelrepo.envswitch:compiler-release:1.0.5'
+//    implementation 'com.github.michaelrepo.envswitch:envswitch:1.0.8'
+//    debugAnnotationProcessor 'com.github.michaelrepo.envswitch:compiler:1.0.8'
+//    releaseAnnotationProcessor 'com.github.michaelrepo.envswitch:compiler-release:1.0.8'
 
 }

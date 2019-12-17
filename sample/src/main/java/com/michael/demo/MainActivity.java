@@ -19,7 +19,7 @@ import com.michael.envswitch.bean.ModuleBean;
 import com.michael.envswitch.listener.OnEnvironmentChangeListener;
 
 
-public class MainActivity extends AppCompatActivity implements OnEnvironmentChangeListener{
+public class MainActivity extends AppCompatActivity implements OnEnvironmentChangeListener {
 
     private static final String TAG = "MainActivity";
 
@@ -65,11 +65,11 @@ public class MainActivity extends AppCompatActivity implements OnEnvironmentChan
     public void onEnvironmentChanged(ModuleBean module, EnvironmentBean oldEnvironment, EnvironmentBean newEnvironment) {
         Log.e(TAG, "Module=" + module.getName() + ",\nOldEnvironment=" + oldEnvironment.getName() + ",\noldUrl=" + oldEnvironment.getUrl()
                 + ",\nnewEnvironment=" + newEnvironment.getName() + ",\nnewUrl=" + newEnvironment.getUrl());
-
+        Log.i("MainActivity2", EnvSwitch.getAppEnvironment(this));
         Toast.makeText(this, "Module=" + module.getName() + ",\nOldEnvironment=" + oldEnvironment.getName() + ",\noldUrl=" + oldEnvironment.getUrl()
                 + ",\nnewEnvironment=" + newEnvironment.getName() + ",\nnewUrl=" + newEnvironment.getUrl(), Toast.LENGTH_SHORT).show();
 
-        if (module.equals(EnvSwitch.MODULE_MUSIC)) {
+        if (module.equals(EnvSwitch.MODULE_APP)) {
             // 如果环境切换后重新请求的接口需要 token，可以通过 postDelay 在延迟一定时间后再请求
             // if the request need token, you can send in postDelay.
             long delayTime = 1500;
