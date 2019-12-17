@@ -14,6 +14,7 @@ import com.michael.demo.fragment.MusicFragment;
 import com.michael.demo.fragment.SettingsFragment;
 
 import com.michael.envswitch.EnvSwitch;
+import com.michael.envswitch.EnvironmentSwitchActivity;
 import com.michael.envswitch.bean.EnvironmentBean;
 import com.michael.envswitch.bean.ModuleBean;
 import com.michael.envswitch.listener.OnEnvironmentChangeListener;
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements OnEnvironmentChan
     public void onEnvironmentChanged(ModuleBean module, EnvironmentBean oldEnvironment, EnvironmentBean newEnvironment) {
         Log.e(TAG, "Module=" + module.getName() + ",\nOldEnvironment=" + oldEnvironment.getName() + ",\noldUrl=" + oldEnvironment.getUrl()
                 + ",\nnewEnvironment=" + newEnvironment.getName() + ",\nnewUrl=" + newEnvironment.getUrl());
-        Log.i("MainActivity2", EnvSwitch.getAppEnvironment(this));
+        Log.i("MainActivity2", EnvSwitch.getAppEnvironment(this,BuildConfig.DEBUG));
         Toast.makeText(this, "Module=" + module.getName() + ",\nOldEnvironment=" + oldEnvironment.getName() + ",\noldUrl=" + oldEnvironment.getUrl()
                 + ",\nnewEnvironment=" + newEnvironment.getName() + ",\nnewUrl=" + newEnvironment.getUrl(), Toast.LENGTH_SHORT).show();
 

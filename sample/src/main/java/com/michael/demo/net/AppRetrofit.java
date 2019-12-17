@@ -18,7 +18,7 @@ public class AppRetrofit {
     private static String sMusicHost = "";
 
     public static Retrofit getMusicRetrofit(Context context) {
-        String host = EnvSwitch.getAppEnvironment(context);
+        String host = EnvSwitch.getAppEnvironment(context,BuildConfig.DEBUG);
         if (sMusicRetrofit == null || sMusicHost == null || !sMusicHost.equals((host))) {
             sMusicHost = host;
             sMusicRetrofit = new Retrofit.Builder()
@@ -37,7 +37,7 @@ public class AppRetrofit {
     private static String sAppHost = "";
 
     public static Retrofit getAppRetrofit(Context context) {
-        String host = EnvSwitch.getAppEnvironment(context);
+        String host = EnvSwitch.getAppEnvironment(context,BuildConfig.DEBUG);
         if (sAppRetrofit == null || sAppHost == null || !sAppHost.equals((host))) {
             sAppHost = host;
             sAppRetrofit = new Retrofit.Builder()
